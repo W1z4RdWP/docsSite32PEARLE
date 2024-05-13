@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+    <div class="grid-container">
+
+        <header>
+            <h1><a href="/">Название сайта</a></h1>
+            <div class="auth-block">
+                <a href="/register"><button class="btn regBtn">Зарегистрироваться</button></a>
+                <a href="/login"><button class="btn regBtn">Уже зарегестрированы? Войти</button></a>
+                <a href="/logout"><button class="btn regBtn">Выйти</button></a>
+            </div>
+        </header>
+        <nav>
+            <a href="{{url_for('mikrotik_page')}}"><button class="btn">Mikrotik</button></a>
+            <a href="{{url_for('zabbix_page')}}"><button class="btn activeBtn">Zabbix</button></a>
+            <a href="{{url_for('dent_page')}}"><button class="btn">Dent</button></a>
+            <a href="{{url_for('ct_page')}}"><button class="btn">КТ</button></a>
+            <a href="{{url_for('xray_page')}}"><button class="btn">Рентген</button></a>
+            <a href="{{url_for('etc_page')}}"><button class="btn">Прочее</button></a>
+        </nav>
+        <main>
+            <div class="navigationMain">
+                <li><p>Добавление устройств</p>
+                    <ol class="subsubcontent">
+                        <li><p><a href="/static/HTMLpages/ZabbixPages/zabbixAddDeviceviaAgent.html">Добавление устройств с помощью Zabbix Agent</a></p></li>
+                        <li><p><a href="/static/HTMLpages/ZabbixPages/zabbixAddDeviceviaAgent.html#setupAgent">Установка агента</a></p></li>
+                        <li><p><a href="/static/HTMLpages/ZabbixPages/zabbixAddDeviceviaAgent.html#zabbixAddHost">Добавление устойства в Zabbix</a></p></li>
+                        <li><p><a href="/static/HTMLpages/ZabbixPages/zabbixAddDeviceviaSNMP.html">Добавление устройств с помощью SNMP</a></p></li>
+                        <li><p><a href="/static/HTMLpages/ZabbixPages/zabbixAddDeviceviaSNMP.html#setupSNMP">Включение протокола SNMP</a></p></li>
+                        <li><p><a href="/static/HTMLpages/ZabbixPages/zabbixAddDeviceviaSNMP.html#zabbixAddHost">Добавление устойства SNMP в Zabbix</a></p></li>
+                
+                    </ol>
+                </li>
+            </div>
+        </main>
+        <aside>
+            <div class="navigationSidebar">
+
+                <ul>
+                    <li>
+                        <p>Добавление устройств</p>
+                        <ul>
+                            <p>Добавление устройств с помощью Zabbix Agent</p>
+                            <li>Установка агента</li>
+                            <li>Добавление устойства в Zabbix</li>
+                            <p>Добавление устройств с помощью SNMP</p>
+                            <li>Включение протокола SNMP</li>
+                            <li>Добавление устойства SNMP в Zabbix</li>
+    
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+      
+            
+    </aside>
+        <footer><h2>&copy; w1z4rdDwp</h2></footer>
+    </div>
+
+</body>
+</html>

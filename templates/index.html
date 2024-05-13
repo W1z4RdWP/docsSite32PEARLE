@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <header>
+            <h1><a href="/">Название сайта</a></h1>
+            <div class="auth-block">
+                <a href="/register"><button class="btn regBtn">Зарегистрироваться</button></a>
+                <a href="/login"><button class="btn regBtn">Уже зарегестрированы? Войти</button></a>
+                <a href="/logout"><button class="btn regBtn">Выйти</button></a>
+            </div>
+        </header>
+        <nav>
+            <a href="{{url_for('mikrotik_page')}}"><button class="btn">Mikrotik</button></a>
+            <a href="{{url_for('zabbix_page')}}"><button class="btn">Zabbix</button></a>
+            <a href="{{url_for('dent_page')}}"><button class="btn">Dent</button></a>
+            <a href="{{url_for('ct_page')}}"><button class="btn">КТ</button></a>
+            <a href="{{url_for('xray_page')}}"><button class="btn">Рентген</button></a>
+            <a href="{{url_for('etc_page')}}"><button class="btn">Прочее</button></a>
+        </nav>
+        <main>
+            <div class="aboutSite">
+                <h2>О сайте</h2>
+                <hr>
+                <p>Данный сайт представляет собой интерактивную базу знаний, созданную Системным Администратором -
+                    Кузнецовым Владиславом, которая призвана обеспечить сотрудников стоматологической клиники
+                    необходимыми инструментами и ресурсами для эффективной работы. Сайт содержит подробные руководства,
+                    обучающие материалы и видеоуроки, которые помогут сотрудникам быстро освоить новые программы и
+                    технологии, а также решить возникающие технические проблемы. Целью создания данного сайта является
+                    повышение производительности и качества работы персонала клиники путем предоставления удобного
+                    доступа к актуальной информации и обучениям. </p>
+            </div>
+            <div class="whatsNew">
+                <h2>Что нового?</h2>
+                <hr>
+                <p>- Добавлены разделы с информацией (Mikrotik, Zabbix, Dent, KT, Рентген) к ним прилагаются инструкции по использованию соответствующего категории ПО и его внедрению</p>
+
+                <p>- Добавлена статья в раздел Zabbix</p>
+                <p>- Добавлена подсветка активной страницы в боковом меню
+                </p>
+                <p>- Добавлен раздел с обновлениями сайта на главной странице.</p>
+                <p>- Сайт находится на стадии разработки и пока недоступен из сети</p>
+                <p>- Сайт передислоцировался на фреймворк Flask <em>(13.04.2024)</em></p>
+                <p>- Добавлениа система авторизации <em>(17.04.2024)</em></p>
+				<p>- Добавлена статья в раздел Dent <em>(08.05.2024)</em></p>
+            </div>
+        </main>
+        <aside>
+            <h2>Sidebar</h2>
+        </aside>
+        <footer>
+            <footer><h2>&copy; w1z4rdDwp</h2></footer>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <header>
+            <h1><a href="/">Название сайта</a></h1>
+            <div class="auth-block">
+                <a href="/register"><button class="btn regBtn">Зарегистрироваться</button></a>
+                <a href="/login"><button class="btn regBtn">Уже зарегестрированы? Войти</button></a>
+                <a href="/logout"><button class="btn regBtn">Выйти</button></a>
+            </div>
+        </header>
+        <nav>
+            <a href="/Mikrotik"><button class="btn">Mikrotik</button></a>
+            <a href="/Zabbix"><button class="btn activeBtn">Zabbix</button></a>
+            <a href="/Dent"><button class="btn">Dent</button></a>
+            <a href="/CT"><button class="btn">КТ</button></a>
+            <a href="/Xray"><button class="btn">Рентген</button></a>
+            <a href="/etc"><button class="btn">Прочее</button></a>
+        </nav>
+        <main>
+            <h2>Добавление устройств с помощью Zabbix Agent</h2>
+            <hr>
+            <h3 id="setupAgent">Установка агента</h3>
+            <div class="mainText">
+                <p>
+                    Заббикс агент используем на всех машинах с Windows.
+                </p>
+                <p>1)Необходимо скачать на устройство агента с официального сайта.</p>
+                <br>
+                <img src="/static/imgs/ZabbixPages/zabbixAddDeviceviaAgentIMGS/Рисунок1.png" alt="Рисунок1" class="instrImgs">
+                <p>После перехода на сайт, спускаемся в самый низ и находим следующее:</p>
+                <img src="/static/imgs/ZabbixPages/zabbixAddDeviceviaAgentIMGS/Рисунок2.png" alt="рисунок2" class="instrImgs">
+                <p>Нам нужна самая модная, последняя версия (в данном случае Zabbix agent 2).</p>
+                <p> Нажимаем Download.</p>
+                <p>После запуска установщика нажимаем Далее (Next), соглашаемся с условиями пользования и жмем еще раз
+                    Далее</p>
+                <img src="/static/imgs/ZabbixPages/zabbixAddDeviceviaAgentIMGS/Рисунок3.png" alt="Рисунок3" class="instrImgs">
+                <p>Здесь ничего не меняем, жмем Next</p>
+                <p>В следующем окне важным пунктом является Zabbix Server IP/DNS</p>
+                <img src="/static/imgs/ZabbixPages/zabbixAddDeviceviaAgentIMGS/Рисунок4.png" alt="рисунок4" class="instrImgs">
+                <p>Вводим IP-адрес на котором работает ZABBIX
+                    У нас он 10.0.1.29 и жмем Next -> Install</p>
+                <p>Можем проверить что агент работает, зайдя в диспетчер задач -> Службы, обычно в самом конце списка появится Zabbix agent</p>
+                <img src="/static/imgs/ZabbixPages/zabbixAddDeviceviaAgentIMGS/Рисунок5.png" alt="Рисунок5" class="instrImgs">
+                <br>
+                <h3 id="zabbixAddHost">Добавление устойства в Zabbix</h3>
+                <br>
+                <p>2)Перейдем к Заббиксу</p>
+                <p>Для этого в адресной строке любого браузера введем ip-адрес zabbix сервера (10.0.1.29)</p>
+                <img src="/static/imgs/ZabbixPages/zabbixAddDeviceviaAgentIMGS/Рисунок6.png" alt="Рисунок6" class="instrImgs">
+                <p>Нажимаем Сбор данных -> Узлы сети и сверху кнопка «Создать узел сети»</p>
+                <img src="/static/imgs/ZabbixPages/zabbixAddDeviceviaAgentIMGS/Рисунок7.png" alt="Рисунок7" class="instrImgs">
+                <p>В шаблонах необходимо указать «Windows by Zabbix agent», в группах узлов сети - группу к которой вы хотите его добавить, в моем случае компьютер будет в группе HOSTS (Имя может быть любым)</p>
+                <br>
+                <p>Самое важное, это указать IP-адрес компьютера, который будем мониторить. Он должен быть неизменным, у меня это 10.0.1.100
+                    В графе порт оставляем 10500, без имзенений.
+                    Жмем добавить и ВСЕ!</p>
+
+            </div>
+        </main>
+        <aside>
+            <div class="navigationSidebar">
+
+                <ul>
+                    <li>
+                        <a href="/Zabbix">
+                            <p>Добавление устройств</p>
+                        </a>
+                        <ul>
+                            <p class="activeTab">Добавление устройств с помощью Zabbix Agent</p>
+                            <a href="#setupAgent">
+                                <li>Установка агента</li>
+                            </a>
+                            <a href="#zabbixAddHost">
+                                <li>Добавление устойства в Zabbix</li>
+                            </a>
+                            <p>Добавление устройств с помощью SNMP</p>
+                            <li>Включение протокола SNMP</li>
+                            <li>Добавление устойства SNMP в Zabbix</li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <footer>
+            <h2>footer</h2>
+        </footer>
+    </div>
+
+</body>
+
+</html>

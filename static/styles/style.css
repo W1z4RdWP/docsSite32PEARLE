@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.hidden{
+    display: none;
+}
+
+body{
+    height: 100dvh;
+    font-size: 1.5rem;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+.grid-container{
+    display: grid;
+    height: 100dvh;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 70px 80px 500px 300px;  
+    grid-template-areas:    "hd hd hd hd hd hd hd hd"
+                            "nav nav nav nav nav nav nav nav"
+                            "mn mn mn mn mn mn sb sb"
+                            "mn mn mn mn mn mn sb sb"
+                            "mn mn mn mn mn mn sb sb"
+                            "mn mn mn mn mn mn sb sb"
+                            "mn mn mn mn mn mn sb sb"
+                            "mn mn mn mn mn mn sb sb"
+                            "ft ft ft ft ft ft ft ft";
+    padding-right: 5%;
+    padding-left: 5%;
+                            
+}
+
+main .regFail{
+    text-align: center;
+    background-color: red;
+    width: fit-content;
+}
+
+form {
+    margin: 0 auto;
+    background-color: rgba(0,185,255,0.77);
+    width: 500px;
+    height: 700px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+    border-radius: 10%;
+}
+
+form h1{
+    text-align: center;
+}
+
+
+
+.authorization-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.group{
+    margin: 10px;
+    padding: 5px;
+}
+
+label {
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+input {
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 10px;
+    margin-top: 10px;
+    height: 40px;
+    width: 400px;
+    border-radius: 20px/20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+}
+input:focus{
+    border: 2px plum;
+    transform: translateX(15px);
+    width: 385px;
+}
+.regBtn{
+    cursor: pointer;
+    padding: 10px 30px;
+    height: 50px;
+    color: #fff;
+    background: #5200a5;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+}
+
+.regBtn:hover{
+    opacity: .80;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    grid-area: hd;
+    background-color: rgb(242, 245, 252);
+    height: 100px;
+   
+}
+
+header .auth-block{
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    margin-top: 5px;
+    margin-right: 50px;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    grid-area: nav;
+    background-color: rgb(228, 232, 241);
+    padding: 15px;
+}
+
+nav .btn{
+    width: 8.5rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+}
+
+nav .btn:hover{
+    background-color: #fff;
+    font-weight: bold;
+}
+
+nav .activeBtn{
+    background-color: #333;
+    color: red;
+}
+
+main{
+    grid-area: mn;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h3,
+main h2{
+    text-align: center;
+}
+
+main .aboutSite{
+    margin-right: 10px;
+    flex-grow: 1;
+    flex-basis: calc(100% / 2);
+}
+
+main .whatsNew{
+    margin-right: 10px;
+    flex-grow: 1;
+    flex-basis: calc(100% / 2);
+    
+}
+
+.mainText .instrImgs{
+    width: 80%;
+    border: 5px solid black;
+}
+
+.navigationMain{
+    margin-top: 5%;
+}
+
+.navigationMain li{
+    margin-top: 25px;
+}
+
+.navigationSidebar{
+    position: sticky;
+    top: 0;
+    margin-top: 30%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.navigationSidebar li,
+.navigationSidebar ul{
+    margin-top: 25px;
+}
+
+.navigationSidebar li .activeTab{
+    border: 1px dashed red;
+}
+
+.subsubcontent{
+    list-style-type: none;
+    margin-left: 5%;
+}
+
+aside{
+    grid-area: sb;
+    border: 1px solid #333;
+}
+
+footer{
+    grid-area: ft;
+    background-color: rgb(242, 245, 252);
+}

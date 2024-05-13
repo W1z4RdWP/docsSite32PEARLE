@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <header>
+            <h1><a href="/">Название сайта</a></h1>
+            <div class="auth-block">
+                <a href="/register"><button class="btn regBtn">Зарегистрироваться</button></a>
+                <a href="/login"><button class="btn regBtn">Уже зарегестрированы? Войти</button></a>
+                <a href="/logout"><button class="btn regBtn">Выйти</button></a>
+            </div>
+        </header>
+        <nav>
+            <a href="{{url_for('mikrotik_page')}}"><button class="btn">Mikrotik</button></a>
+            <a href="{{url_for('zabbix_page')}}"><button class="btn">Zabbix</button></a>
+            <a href="{{url_for('dent_page')}}"><button class="btn">Dent</button></a>
+            <a href="{{url_for('ct_page')}}"><button class="btn">КТ</button></a>
+            <a href="{{url_for('xray_page')}}"><button class="btn">Рентген</button></a>
+            <a href="{{url_for('etc_page')}}"><button class="btn">Прочее</button></a>
+        </nav>
+        <main>
+
+            <h2>Ваш профиль</h2>
+            <p>Your account details are below:</p>
+
+            <p>
+                Username:
+                {{ account['username'] }}
+            </p>
+
+        </main>
+
+        <footer>
+            <h2>&copy; w1z4rdDwp</h2>
+        </footer>
+    </div>
+
+</body>
+
+</html>
